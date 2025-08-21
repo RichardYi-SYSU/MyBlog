@@ -1,5 +1,7 @@
-.wrapper
+.testContent
 {
-    margin:0 auto;
-    
+    background-color: #fefefe;
+    /* height: 2000px; */
+    border-radius: 20px;
+    padding: 20px;
 }
