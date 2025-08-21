@@ -14,12 +14,12 @@
     <div class="header">
         <div class="wrapper">
             <div class="navBar">
-                <img src="./" alt="">
+                <img src="./images/Richard-Yi LOGO.jpg" alt="">
                 <ul>
-                    <li><a href="javascript:;">有四个字</a></li>
+                    <li class="navBarActive"><a href="javascript:;">首页</a></li>
                     <li><a href="javascript:;">作品</a></li>
                     <li><a href="javascript:;">项目</a></li>
-                    <li><a href="javascript:;">三个字</a></li>
+                    <li><a href="javascript:;">关于我</a></li>
                 </ul>
             </div>
             
@@ -28,16 +28,39 @@
     <div class="headerSeperator"></div>
     <!-- 顶部导航栏跳转逻辑相关事件 -->
     <script>
-        
+        const li=document.querySelectorAll('.navBar ul li')
+        for(let i=0;i<li.length;i++)
+        {
+            li[i].addEventListener('mouseenter',function(){
+                for(let j=1;j<li.length;j++)
+                {
+                    li[j].classList.remove('navBarActive')
+                }
+                li[i].classList.add('navBarActive')
+            })
+            li[i].addEventListener('mouseleave',function(){
+                for(let k=1;k<li.length;k++)
+                {
+                   li[k].classList.remove('navBarActive') 
+                }
+            })
+        }
     </script>
     <!-- 内容 -->
+    <!-- 欢迎内容 -->
+    <div class="wrapper">
+        <div class="welcome">
+            <div class="left">
+                <p>Welcome to</p>
+                <p>RichardYi's Blog</p>
+                <p>ようこそ!</p>
+            </div>
+        </div>
+    </div>
+    <!-- 内容卡片 -->
     <div class="wrapper">
         <div class="testContent">
-            1.教材：《计算机网络-自顶向下方法（第7版）》，机械工业出版社，2016
-2.课件：https://pan.baidu.com/s/1EElOrkkY4WQqgeKHuGm-bg 密码:1958。
-3.申明：1）up主 将上课用小版pdf以 上面链接方式免费分享给各位学生，用于学习。由于版权等问题，不提供其他学习资料，望理解。 不在任何地方销售学习资料，谨防上当。2）由于时间精力有限，只在评论区抽空回答一下有关课程的一般原理性问题，不做习题解答的响应，望理解，十分抱歉。
-4.课程简介：《计算机网络》mooc是2020年秋科大自动化系本科课程录制版，可与中科大学生一起完成专业知识的学习。
-在介绍计算机网络体系架构的基础上，自上而下、以互联网为例系统地阐述了网络体系结构各层次的主要服务、工作原理、常用技术和协议，包括应用层、传输层、网络层、数据链路层和物理层，最后是网络安全原理和协议。
+            请输入文本
         </div>
     </div>
     <!-- 底部版权栏 -->
