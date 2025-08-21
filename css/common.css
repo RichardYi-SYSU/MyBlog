@@ -101,7 +101,7 @@ body
 }
 .bottom .slogan p:nth-child(2)
 {
-    font-family: JetBrains Mono,Consolas;
+    font-family: 'JetBrains Mono','Consolas';
     font-size: 18px;
     font-style: italic;
     margin-top: 8px;
