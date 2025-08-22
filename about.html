@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="header">
+        <div class="wrapper">
+            <div class="navBar">
+                <img src="./images/avatar/Richard-Yi LOGO.jpg" alt="">
+                <ul>
+                    <li ><a href="./index.html">首页</a></li>
+                    <li><a href="./artworks.html">作品</a></li>
+                    <li><a href="./articles.html">随笔</a></li>
+                    <li class="navBarActive"><a href="./about.html">关于我</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="headerSeperator"></div>
+    <script>
+        const img=document.querySelector('.navBar img')
+        img.addEventListener('click',()=>{
+            window.open("./index.html","_self")
+            
+        })
+    </script>
+    <!-- 主体部分 -->
+    <div class="wrapper">
+        <div class="selfContent">
+            <div class="left">
+                <img src="./images/avatar/Kiana_logo.jpeg" alt="Richard-Yi-logo" class="logo">
+                <p class="name">Richard-Yi</p>
+                <div class="smallSeparator"></div>
+                <div class="info">
+                    <i class="ri-mail-line">1641687849@qq.com</i>
+                    <i class="ri-graduation-cap-line">Sun-Yatsen University</i>
+                    <i class="ri-computer-line">ComputerScience</i>
+                    <i class="ri-map-pin-line">Guangzhou</i>
+                    
+                </div>
+                <div class="smallSeparator"></div>
+
+                <div class="socialPlatformIcons">
+                    <i class="ri-bilibili-line"></i>
+                    <i class="ri-zhihu-line"></i>
+                    <i class="ri-github-fill"></i>
+                </div>
+                
+            </div>
+            <!-- 个人名片中跳转逻辑实现 -->
+            <script>
+                const bili=document.querySelector('.socialPlatformIcons .ri-bilibili-line')
+                const zhihu=document.querySelector('.socialPlatformIcons .ri-zhihu-line')
+                const github=document.querySelector('.socialPlatformIcons .ri-github-fill')
+                bili.addEventListener('click',()=>{
+                    window.open('https://space.bilibili.com/104113203',"_blank")
+                })
+                zhihu.addEventListener('click',()=>{
+                    window.open('https://www.zhihu.com/people/richard-22-34',"_blank")
+                })
+                github.addEventListener('click',()=>{
+                    window.open('https://github.com/RichardYi-SYSU',"_blank")
+                })
+                
+            </script>
+
+
+            <div class="right">
+                <div class="selfCard">
+                    <div class="githubChart">
+                        <div class="markdownStyle">
+                            <p class="aboveTitle">GITHUB CONTRIBUTION CHART</p>
+                            <h1>Github贡献量可视化表</h1>
+                            <div class="largeSeparator"></div>
+                            <img src="https://ghchart.rshah.org/RichardYi-SYSU" alt="RichardYi-SYSU's Github chart"class="githubChartImg" />
+                        </div>
+                    </div>
+                </div>
+                <!-- 技术栈 -->
+                <div class="selfCard">
+                    <div class="markdownStyle">
+                        <p class="aboveTitle">SKILLS</p>
+                        <h1>技术栈</h1>
+                        <div class="largeSeparator"></div>
+                    </div>
+                    <div class="skillicons">
+                        <img src="./images/skillicons/C.svg" alt="">
+                        <img src="./images/skillicons/HTML.svg" alt="">
+                        <img src="./images/skillicons/CSS.svg" alt="">
+                        <img src="./images/skillicons/JavaScript.svg" alt="">
+                        <img src="./images/skillicons/Photoshop.svg" alt="">
+                        <img src="./images/skillicons/Git.svg" alt="">
+                        <img src="./images/skillicons/Markdown-Dark.svg" alt="">
+                        
+                        
+                    </div>
+                </div>
+                <!-- MBTI展示 -->
+                <div class="selfCard">
+                    
+                    <div class="markdownStyle">
+                        <p class="aboveTitle">PERSONALITY</p>
+                        <h1>MBTI人格</h1>
+                        <div class="largeSeparator"></div>
+                    </div>
+                    <div class="mbti">
+                        <img src="./images/ENFJ.svg" alt="">
+                        <div class="describe">
+                            <span>ENFJ-T</span>
+                            <span>主人公</span>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <!-- 兴趣展示 -->
+                <div class="selfCard">
+                    <div class="markdownStyle">
+                        <p class="aboveTitle">INTERESTS</p>
+                        <h1>个人兴趣</h1>
+                        <div class="largeSeparator"></div>
+                    </div>
+                    <div class="interests">
+                        <div>
+                            <h2>摄影</h2>
+                            <p>Photography</p>
+                        </div>
+                        <div>
+                            <h2>旅行</h2>
+                            <p>Travel</p>
+                        </div>
+                        <div>
+                            <h2>二次元</h2>
+                            <p>ACGN</p>
+                        </div>
+                        <div>
+                            <h2>铁道</h2>
+                            <p>Railway</p>
+                        </div>
+                        <div>
+                            <h2>航空</h2>
+                            <p>Aviation</p>
+                        </div>
+                        <div>
+                            <h2>数码</h2>
+                            <p>Digitals</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 友链展示 -->
+                <div class="selfCard">
+                    <div class="markdownStyle">
+                        <p class="aboveTitle">FRIENDLY LINKS</p>
+                        <h1>友情链接</h1>
+                        <div class="largeSeparator"></div>
+                        
+                    </div>
+
+                </div>
+                <div class="selfCard">
+                    <div class="markdownStyle">
+                        <p class="aboveTitle">THE DESIGN OF MY LOGO</p>
+                        
+                        <h1>个人LOGO的设计思路</h1>
+                        <div class="largeSeparator"></div>
+                        <p>底下这个是个人logo。大概是自己在高二的时候设计的。</p>
+                        <img src="./images/avatar/Richard-Yi LOGO.jpg" alt="" class="introduction_RYlogo">
+                        <p class="imgDepict">个人Logo</p>
+                        <p>首先是整体的配色，选择黑白主要是因为自己当时觉得这个配色比较高级，且如同黑白摄影一样，不用去考虑太多颜色搭配之类的问题。</p>
+                        <p>其次是边框，logo的边框矩形使用了0.618：1的黄金比例，以求获得更舒服的观感。</p>
+                        <p>然后是内部元素的设计，这里我从自己的cn中提取出“R”和“Y”，作为主要的辨识要素。随后我发现R右下角的一撇与Y的左上角一撇能够连接起来，二者分局左上角与右下角，刚好能放进一个矩形中。</p>
+                        <p>为了使整体的元素更加简洁，我仅使用了圆弧与直线构成整个logo的核心辨识部分，“R”的字母右侧及上侧融入进边框中，而“Y”的右侧则用一条圆弧代替。</p>
+                        <p>随后我感觉元素还是过于单薄，于是加粗了线宽，并在线中间进行镂空处理，得到了最终的成品。</p>
+                        <h3><span class="leftSeparator"></span>h3标题</h3>
+                        <p>另一些内容</p>
+                        <img src="./images/will/WILLwallpaper.jpg" alt=""class="WILLwallpaper">
+                        <p class="imgDepict">漫协壁纸（图片描述测试）</p>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- 底部版权栏 -->
+    <div class="bottom">
+        <div class="wrapper">
+            <div class="slogan">
+                <p>" 永远<span>年轻</span>，永远<span>热爱</span>，永远<span>热泪盈眶</span>&nbsp;&nbsp;"</p>
+                <p>With youth, with passion, with tears of devotion.</p>
+            </div>
+            <div class="logos">
+                <a href="https://github.com/RichardYi-SYSU/MyBlog"  class="fab fa-github"></a>
+                <a href=""></a>
+            </div>
+            <div class="copyright">
+               <p>Copyright © 2025, Richard-Yi All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

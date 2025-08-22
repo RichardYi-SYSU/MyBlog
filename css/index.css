@@ -35,8 +35,8 @@
     font-weight: 600;
     font-size: 40px;
     color: rgb(255, 255, 255);
-    font-family: 'Google Sans Code','Consolas';
-    transform: translateX();
+    font-family: 'JetBrainsMono','Consolas';
+    font-weight: bold;
     
 }
 .welcome .left p:nth-child(3)
@@ -49,7 +49,7 @@
 .testContent
 {
     background-color: #fefefe;
-    height: 2000px;
+    /* height: 2000px; */
     border-radius: 20px;
     padding: 20px;
 }
