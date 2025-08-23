@@ -89,7 +89,7 @@ KLM和PanAm的747都被指示到跑道尽头准备起飞，但没有专用滑行
 
 *（附一张自己在白云机场拍的国航747-8 编号B-2480）*
 
-<img src="../posts/pictures/post_1.webp">
+<img src="/MyBlog/posts/pictures/post_1.webp">
 
 
 祝老师的公选课越办越好！

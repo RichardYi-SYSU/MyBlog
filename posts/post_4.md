@@ -2,4 +2,4 @@
 
 ## 内容施工中
 
-<img src="../posts/pictures/post_3.webp" class="smallSize">
+<img src="/MyBlog/posts/pictures/post_3.webp" class="smallSize">
