@@ -1,6 +1,6 @@
 .bg_sysu
 {
-    background-image: url(/MyBlog/images/huaishi.webp);
+    background-image: url('/MyBlog/images/huaishi.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }

@@ -1,6 +1,6 @@
 .bg_chaseSun
 {
-    background-image: url(/MyBlog/images/chaseSun.webp);
+    background-image: url('/MyBlog/images/chaseSun.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
