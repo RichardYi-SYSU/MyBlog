@@ -13,8 +13,8 @@
 </head>
 <body>
     <!-- 顶部导航栏 -->
-    <div class="header">
-        <div class="wrapper">
+    <div class="wrapperHeader">
+        <div class="header">
             <div class="navBar">
                 <img src="./images/avatar/Richard-Yi LOGO.jpg" alt="">
                 <ul>
@@ -27,7 +27,7 @@
             
         </div>
     </div>
-    <div class="headerSeperator"></div>
+    
     <script>
         const img=document.querySelector('.navBar img')
                 img.addEventListener('click',()=>{
@@ -35,7 +35,47 @@
                     
                 })
     </script>
+    <div class="bannerTop  bg_willWallpaper">
+        
+        <div class="pageName">
+            <h3>关于我</h3>
+            <i class="ri-arrow-down-circle-line"></i>
+        </div>
+    </div>
+    <script>
+        arrow=document.querySelector('.pageName i')
+        arrow.addEventListener('click',function(){
+            window.scrollTo({
+                top:document.querySelector('.headerSeparator').offsetTop,
+                behavior:'smooth'
+            })
+        })
+
+    </script>
+    <div class="headerSeparator"></div>
     
+    <div class="wrapper">
+        <div class="testContent">
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- 底部版权栏 -->
     <div class="bottom">
         <div class="wrapper">

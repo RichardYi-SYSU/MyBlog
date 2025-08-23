@@ -1,3 +1,10 @@
+.bg_willWallpaper
+{
+    background-image: url(../images/will/WILLwallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
 .selfContent
 {
     display: flex;

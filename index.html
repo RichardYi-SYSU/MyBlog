@@ -13,8 +13,8 @@
 </head>
 <body>
     <!-- 顶部导航栏 -->
-    <div class="header">
-        <div class="wrapper">
+    <div class="wrapperHeader">
+        <div class="header">
             <div class="navBar">
                 <img src="./images/avatar/Richard-Yi LOGO.jpg" alt="">
                 <ul>
@@ -24,29 +24,11 @@
                     <li><a href="./about.html">关于我</a></li>
                 </ul>
             </div>
-            
         </div>
     </div>
-    <div class="headerSeperator"></div>
+    <!-- <div class="headerSeperator"></div> -->
     <!-- 顶部导航栏跳转逻辑相关事件 -->
     <script>
-        // const li=document.querySelectorAll('.navBar ul li')
-        // for(let i=0;i<li.length;i++)
-        // {
-        //     li[i].addEventListener('mouseenter',function(){
-        //         for(let j=1;j<li.length;j++)
-        //         {
-        //             li[j].classList.remove('navBarActive')
-        //         }
-        //         li[i].classList.add('navBarActive')
-        //     })
-        //     li[i].addEventListener('mouseleave',function(){
-        //         for(let k=1;k<li.length;k++)
-        //         {
-        //            li[k].classList.remove('navBarActive') 
-        //         }
-        //     })
-        // }
         const img=document.querySelector('.navBar img')
                 img.addEventListener('click',()=>{
                     window.open("./index.html","_self")
@@ -54,17 +36,33 @@
                 })
     </script>
     <!-- 内容 -->
-    <!-- 欢迎内容 -->
-    <div class="wrapper">
-        <div class="welcome">
+    <!-- 顶部banner内容 -->
+    
+        <div class="bannerTop  bg_sysu">
             <div class="left">
                 <p>Welcome to</p>
                 <p>RichardYi's Blog</p>
                 <p>ようこそ!</p>
             </div>
+            <div class="pageName">
+                <h3>首页</h3>
+                <i class="ri-arrow-down-circle-line"></i>
+            </div>
         </div>
-    </div>
+        <script>
+            arrow=document.querySelector('.pageName i')
+            arrow.addEventListener('click',function(){
+                window.scrollTo({
+                    top:document.querySelector('.headerSeparator').offsetTop,
+                    behavior:'smooth'
+                })
+            })
+
+        </script>
+        <div class="headerSeparator"></div>
     <!-- 内容卡片 -->
+        
+        
     <div class="wrapper">
         <div class="testContent">
             请输入文本
