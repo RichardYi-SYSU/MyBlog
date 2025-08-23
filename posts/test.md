@@ -4,7 +4,7 @@
 - Adolescence: Period of **significant physical and psychological changes**
 - Impacts **self-perception, social interactions, and emotional well-being**
 
----
+
 
 # Key Physical Changes
 
@@ -20,7 +20,14 @@
 - **Voice changes** in boys  
 - Coordination challenges and **physical awkwardness**  
 
----
+```c
+int main()
+{
+    printf("Hello World");
+    return 0;
+}
+
+```
 
 # Psychological Effects
 
@@ -39,7 +46,7 @@
 - Early maturity is **more advantageous for boys**  
 - Late maturity is **more negative for boys** than girls  
 
----
+
 
 # Other Observations
 - **Physical coordination** lags behind growth spurts  
@@ -48,7 +55,7 @@
   - Girls’ growth starts earlier but plateaus sooner  
   - Boys’ growth continues longer  
 
----
+
 
 # Conclusion
 - Adolescence involves **interconnected physical and psychological shifts**  

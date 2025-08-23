@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artworks</title>
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/artworks.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
@@ -30,29 +30,35 @@
     
     <!-- 顶部导航栏跳转逻辑相关事件 -->
     <script>
-        // const li=document.querySelectorAll('.navBar ul li')
-        // for(let i=0;i<li.length;i++)
-        // {
-        //     li[i].addEventListener('mouseenter',function(){
-        //         for(let j=1;j<li.length;j++)
-        //         {
-        //             li[j].classList.remove('navBarActive')
-        //         }
-        //         li[i].classList.add('navBarActive')
-        //     })
-        //     li[i].addEventListener('mouseleave',function(){
-        //         for(let k=1;k<li.length;k++)
-        //         {
-        //            li[k].classList.remove('navBarActive') 
-        //         }
-        //     })
-        // }
         const img=document.querySelector('.navBar img')
                 img.addEventListener('click',()=>{
                     window.open("./index.html","_self")
                     
                 })
     </script>
+
+
+    <!-- 顶部banner -->
+    <div class="bannerTop  bg_chaseSun">
+
+        <div class="pageName">
+            <h3>作品</h3>
+            <i class="ri-arrow-down-circle-line"></i>
+        </div>
+    </div>
+    <script>
+        arrow=document.querySelector('.pageName i')
+        arrow.addEventListener('click',function(){
+            window.scrollTo({
+                top:document.querySelector('.headerSeparator').offsetTop,
+                behavior:'smooth'
+            })
+        })
+
+    </script>
+    <div class="headerSeparator"></div>
+
+
     <!-- 底部版权栏 -->
     <div class="bottom">
         <div class="wrapper">

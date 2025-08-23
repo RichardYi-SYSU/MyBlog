@@ -1,6 +1,6 @@
-.bg_willWallpaper
+.bg_shinku
 {
-    background-image: url(../images/will/WILLwallpaper.jpg);
+    background-image: url(../images/shinku.webp);
     background-repeat: no-repeat;
     background-size:cover;
 }
@@ -199,6 +199,7 @@
 .githubChartImg
 {
     width: 650px;
+    border-radius: 0!important;
 }
 
 .introduction_RYlogo

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>文章详情</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/post.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <!-- Highlight.js 样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/hybrid.css">
+     <link rel="stylesheet" href="./css/bluetex.css">
+
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="wrapperHeader">
+        <div class="header">
+            <div class="navBar">
+                <img src="./images/avatar/Richard-Yi LOGO.jpg" alt="">
+                <ul>
+                    <li ><a href="./index.html">首页</a></li>
+                    <li><a href="./artworks.html">作品</a></li>
+                    <li class="navBarActive"><a href="./articles.html">随笔</a></li>
+                    <li><a href="./about.html">关于我</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- 顶部导航栏跳转逻辑相关事件 -->
+    <script>
+        const img=document.querySelector('.navBar img')
+                img.addEventListener('click',()=>{
+                    window.open("./index.html","_self")
+                    
+                })
+    </script>
+    <div class="headerSeparator"></div>
+
+
+
+    <!-- md文档渲染区域 -->
+    <div class="wrapper">
+        <div class="markdown-body">
+            <div id="write">正在加载文章...</div>
+            <div class="backTop">
+                <i class="ri-arrow-up-circle-line"></i>
+            </div>
+        </div>
+        
+    <div class="returnBtn">
+        <a class="return"><i class="ri-arrow-left-circle-line"></i> 返回上一级</a>
+    </div>
+    <script>
+        const backTop=document.querySelector('.backTop')
+        const backPage=document.querySelector('.returnBtn')
+        backTop.addEventListener('click',function(e){
+            window.scrollTo({
+                top:0,
+                behavior:'smooth'
+            })
+        })
+        backPage.addEventListener('click',function(e){
+            window.history.back();
+        })
+    </script>
+    
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
+  
+    if (file) {
+      fetch(file)
+        .then(res => res.text())
+        .then(md => {
+          document.getElementById('write').innerHTML = marked.parse(md);
+  
+          // 渲染完成后执行高亮
+          document.querySelectorAll('pre code').forEach(block => {
+            hljs.highlightElement(block);
+          });
+        })
+        .catch(() => {
+          document.getElementById('write').innerHTML = "<p>文章加载失败</p>";
+        });
+    } else {
+      document.getElementById('write').innerHTML = "<p>未指定文章</p>";
+    }
+  </script>
+  
+  <!-- 底部版权栏 -->
+    <div class="bottom">
+        <div class="wrapper">
+            <div class="slogan">
+                <p>" 永远<span>年轻</span>，永远<span>热爱</span>，永远<span>热泪盈眶</span>&nbsp;&nbsp;"</p>
+                <p>With youth, with passion, with tears of devotion.</p>
+            </div>
+            <div class="logos">
+                <a href="https://github.com/RichardYi-SYSU/MyBlog"  class="fab fa-github"></a>
+                <a href=""></a>
+            </div>
+            <div class="copyright">
+               <p>Copyright © 2025, Richard-Yi All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
