@@ -1,34 +1,39 @@
 [
     {
-        "description":"自己制作的一个鹭江站的站牌",
-        "img":"designs/鹭江final.png"
+        "description":"以败犬女主标题为灵感的表情包",
+        "img":"designs/design_1.jpg"
+    },
+    {
+        "description":"高中时期2042发布会设计的logo",
+        "img":"designs/design_2.jpg"
+    },
+    {
+        "description":"拼接了一些漫协的素材做成的壁纸",
+        "img":"designs/design_3.jpg"
+    },
+    {
+        "description":"以天守阁为主题的海报",
+        "img":"designs/design_4.jpg"
+    },
+    {
+        "description":"适用于iPhone12的柴郡手机壳",
+        "img":"designs/design_5.png"
+    },
+    {
+        "description":"逸仙青年logo设计",
+        "img":"designs/design_6.png"
+    },
+    {
+        "description":"和朋友一起做的suica ppppppremium",
+        "img":"designs/design_7.png"
     },
     {
         "description":"自己制作的一个鹭江站的站牌",
-        "img":"designs/鹭江final.png"
+        "img":"designs/design_8.png"
     },
     {
-        "description":"自己制作的一个鹭江站的站牌",
-        "img":"designs/鹭江final.png"
-    },
-    {
-        "description":"自己制作的一个鹭江站的站牌",
-        "img":"designs/鹭江final.png"
-    },
-    {
-        "description":"自己制作的一个鹭江站的站牌",
-        "img":"designs/鹭江final.png"
-    },
-    {
-        "description":"自己制作的一个鹭江站的站牌",
-        "img":"designs/鹭江final.png"
-    },
-    {
-        "description":"自己制作的一个鹭江站的站牌",
-        "img":"designs/鹭江final.png"
-    },
-    {
-        "description":"自己制作的一个鹭江站的站牌",
-        "img":"designs/鹭江final.png"
+        "description":"宁宁主题的手机壳",
+        "img":"designs/design_9.png"
     }
+
 ]
