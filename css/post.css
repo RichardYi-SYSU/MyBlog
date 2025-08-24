@@ -6,6 +6,8 @@
     width: 960px;
     background-color: white;
 }
+
+/* returnBtn和backTop已放至common.css */
 .returnBtn
 {
     margin: 0 auto;

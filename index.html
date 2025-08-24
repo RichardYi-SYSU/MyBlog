@@ -6,10 +6,14 @@
     <title>Index</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/post.css">
+    <link rel="stylesheet" href="./css/indexMarkdownStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"/>
+    <!-- Highlight.js 样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/hybrid.css">
 </head>
 <body>
     <!-- 顶部导航栏 -->
@@ -61,13 +65,50 @@
         </script>
         <div class="headerSeparator"></div>
     <!-- 内容卡片 -->
-        
-        
+    <!-- md文档渲染区域 -->
     <div class="wrapper">
-        <div class="testContent">
-            请输入文本
+        <div class="markdown-body">
+            <div id="write">
+                <h1>👋Hi there!这里是我的个人博客</h1>
+                <h3>网站简介</h3>
+                <p>这是一个纯静态的博客，使用HTML+CSS+JS来构建。但实际上JS相关的内容很少，一方面是因为我学习的JS相关的内容比较少，能实现的网页交互功能还比较有限（比如页面跳转，回到顶部之类），另一方面是在整个网页的开发中我更注重于元素的排版美观而非交互设计。</p>
+                <p>此外，也是考虑到自己的JS相关操作尚未完全掌握，所以就没有使用Vue或React之类框架或一些博客框架来搭建，后期有空的话可能会将其迁移至框架中。</p>
+                <p>回到网站的页面设计。我一共设计了四个页面，分别为“首页”，“作品”，“随笔”，“关于我”。其各自实现的功能如下：</p>
+                <ul>
+                    <li><strong>首页：</strong>当作一个公告栏，使用一篇markdown文档来充当内容（也就是本篇文档）</li>
+                    <li><strong>作品：</strong>作品部分分为了四个板块：“摄影作品”，“视频作品”，“设计作品”和“Github项目展示”。每个板块在点击后会跳转至对应的页面用于渲染相关内容</li>
+                    <li><strong>随笔：</strong>随笔部分由若干个文章卡片构成，每个卡片都对应一篇文章（markdown文档），点击后会跳转至post.html用于渲染对应文章</li>
+                    <li><strong>关于我：</strong>关于我部分由左侧个人名片和右侧多个特征卡片构成，介绍了自己的一些信息</li>
+                </ul>
+                <h3>设计细节</h3>
+                <p>除了页面以外，我也想分享下自己在设计网站时的一些探索。</p>
+                <h5>导航栏</h5>
+                <p>这一部分我的灵感来自于<code>uicook.cn</code>的导航栏设计。有别于多数网页使用的width:100%的导航栏，我缩小了其长度，同时为其设计了背景模糊的毛玻璃效果，并增加阴影，使其浮于内容之上。美观的同时不失实用性</p>
+                <h5>字体选择</h5>
+                <p>中文使用谷歌的<code>NotoSansSC</code>，部分英文使用<code>JetBrainsMono</code>，算是一个比较美观的搭配</p>
+                <h5>Banner设计</h5>
+                <p>四个界面的初始状态是4张大的背景图，我将其高度设置为100vh，这样在打开时其大小刚好覆盖整个浏览器。</p>
+                <p>同时在正下方创建了一个显示当前页面信息的按钮，鼠标悬停时会变为向下箭头，引导用户点击进入页面主体部分，符合交互逻辑</p>
+                <h5>尽可能减少直角</h5>
+                <p>为了使整个页面的元素和谐，我给通配符加了border-radius:20px的属性，这使得所有div标签都会具有圆角边。同时各种分割符，包括Markdown文档的装饰元素我都会添加圆角相关属性</p>
+                <h3>相关技术</h3>
+                <h5>marked.js</h5>
+                <p>在构建随笔板块时，我意识直接把文章写进html标签里还是太原始了，且后期维护性几乎为0。</p>
+                <p>于是，借助于GPT推荐的marked.js，我能够将markdown文档放在posts文件夹内，封面放在pictures文件夹中，来实现外部的md文档渲染，大大提高了易用性。</p>
+                <h5>JSON的使用</h5>
+                <p>与marked.js类似，通过在html中设置div.gallery标签和div.lighthouse标签，并添加js脚本，用于获取json中封面或网页视频的地址信息，传入img、iframe等对应标签的src中，同样实现了网页元素的外部引入，内部渲染</p>
+                <h3>后续改进</h3>
+                <p>应该会增加一些交互、动效相关的内容</p>
+                <p>目前本网页的响应式设计几乎为0，因此只有在电脑上才有最佳效果。后续会针对响应式进行设计</p>
+                <h3>Last but not least</h3>
+                <p>如果你觉得这个网页设计（手搓）得还算不错，欢迎到本博客的Github仓库界面Star本项目（入口为页面最下方Github图标）</p>
+                <blockquote><p>若网页部分元素无法渲染，请检查是否使用了ADblock相关插件</p></blockquote>
+            </div>
+            
         </div>
-    </div>
+        
+        
+    
     <!-- 底部版权栏 -->
     <div class="bottom">
         <div class="wrapper">

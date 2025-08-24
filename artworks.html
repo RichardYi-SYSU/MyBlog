@@ -40,7 +40,9 @@
 
     <!-- 顶部banner -->
     <div class="bannerTop  bg_chaseSun">
-
+        <div class="left">
+            <p>Artworks</p>
+        </div>
         <div class="pageName">
             <h3>作品</h3>
             <i class="ri-arrow-down-circle-line"></i>
@@ -57,6 +59,48 @@
 
     </script>
     <div class="headerSeparator"></div>
+
+    <!-- 摄影、视频、项目导航栏 -->
+    <div class="workTypeSwitch">
+        <div class="photos">
+            <h1>摄影作品</h1>
+        </div>
+        <div class="videos">
+            <h1>视频创作</h1>
+        </div>
+        <div class="designs">
+            <h1>设计作品</h1>
+        </div>
+        <div class="projects">
+            <h1>Github项目</h1>
+        </div>
+    </div>
+    <script>
+        //上述项目的跳转逻辑
+        const photos=document.querySelector('.photos')
+        const videos=document.querySelector('.videos')
+        const designs=document.querySelector('.designs')
+        const projects=document.querySelector('.projects')
+
+        photos.addEventListener('click',()=>{
+            window.open("./artworks/photos.html","_self")
+        })
+        videos.addEventListener('click',()=>{
+            window.open("./artworks/videos.html","_self")
+        })
+        designs.addEventListener('click',()=>{
+            window.open("./artworks/designs.html","_self")
+        })
+        projects.addEventListener('click',()=>{
+            window.open("./artworks/projects.html","_self")
+        })
+    </script>
+
+
+
+
+
+
 
 
     <!-- 底部版权栏 -->

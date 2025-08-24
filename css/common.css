@@ -1,12 +1,3 @@
-*
-{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* list-style:none; */
-    text-decoration: none;
-    cursor: default;
-}
 @font-face {
     font-family: 'JetBrainsMono';
     src: url(../fonts/JetBrainsMono/JetBrainsMono-Regular.woff2);
@@ -30,6 +21,22 @@
     src: url(../fonts/JetBrainsMono/JetBrainsMono-BoldItalic.woff2);
     font-weight:bold;
     font-style:italic;   
+}
+@font-face{
+    font-family: 'NotoSansSC';
+    src: url(../fonts/NotoSansSC-VariableFont_wght.ttf);
+}
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* list-style:none; */
+    text-decoration: none;
+    cursor: default;
+    font-family: 'NotoSansSC';
 }
 
 
@@ -120,8 +127,9 @@ body
     cursor: pointer;
     padding: 0 20px;
     line-height: 40px;
-    font-size: 18px;
-    color: rgb(75, 77, 80);
+    font-size: 16px;
+    color: rgb(73, 82, 84);
+    font-weight: 600;
 }
 /* 顶部banner区域 */
 .bannerTop
@@ -136,10 +144,45 @@ body
     justify-content: center;
     position: relative;
 }
+
+.bannerTop .left
+{
+    /* margin-left: 24px; */
+    background-color: rgba(133, 133, 133, 0.349);
+    backdrop-filter: blur(10px);
+    padding: 16px 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+.bannerTop .left:hover 
+{
+    transform: scale(1.05);
+}
+
+.bannerTop .left p
+{
+    font-weight: 600;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: 'JetBrainsMono','Consolas';
+    font-weight: bold;
+    
+}
+
+
+
+
+
 .bannerTop .pageName
 {
     position: absolute;
-    
     border-radius: 80px;
     background-color:  #b4b4b437;
     backdrop-filter: blur(5px);
@@ -313,4 +356,32 @@ font-size: 32px;
     height: 6px;
     border-radius: 8px;
     margin: 12px 0;
+}
+
+/* 返回上一级 */
+.returnBtn
+{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.return
+{
+    
+    line-height: 40px;
+    padding:0px 20px;
+    margin-top: 24px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 40px;
+    height: 40px;
+    font-size: 16px;
+    box-shadow: none;
+    transition: all .3s ease;
+}
+.return:hover
+{
+    background-color: #f3f3f3;
 }

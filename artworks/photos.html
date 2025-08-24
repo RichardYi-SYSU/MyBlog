@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>摄影作品展示</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/photos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- 顶部导航栏 -->
+    <div class="wrapperHeader">
+        <div class="header">
+            <div class="navBar">
+                <img src="../images/avatar/Richard-Yi LOGO.jpg" alt="">
+                <ul>
+                    <li ><a href="../index.html">首页</a></li>
+                    <li class="navBarActive"><a href="../artworks.html">作品</a></li>
+                    <li><a href="../articles.html">随笔</a></li>
+                    <li><a href="../about.html">关于我</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="headerSeparator"></div>
+    <!-- 顶部导航栏跳转逻辑相关事件 -->
+    <script>
+        const img=document.querySelector('.navBar img')
+                img.addEventListener('click',()=>{
+                    window.open("./index.html","_self")
+                    
+                })
+    </script>
+
+
+
+
+
+  <!-- 标题层 -->
+    <div class="markdownStyle">
+        <p class="aboveTitle" style="text-align: center;">MY PHOTOGRAPHY GALLERY</p>
+        <h1 style="text-align:center; padding:0px 0 16px 0;">行摄世间</h1>
+        </div>
+    <div class="largeSeparator" style="margin: 0 auto 24px auto;"></div>
+
+    <!-- 图片渲染层 -->
+    <div class="gallery"></div>
+
+    <!-- 预览层 -->
+    <div class="lightbox" id="lightbox">
+      <img src="" alt="preview">
+    </div>
+
+  <script>
+    // 获取 gallery 和 lightbox 元素
+    const gallery = document.querySelector(".gallery");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+
+    // 从 images.json 加载图片
+    fetch("photos.json")
+      .then(res => res.json())
+      .then(images => {
+        images.forEach(src => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = "photo";
+          img.addEventListener("click", () => {
+            lightboxImg.src = src;
+            lightbox.classList.add("active");
+          });
+          gallery.appendChild(img);
+        });
+      });
+
+    // 点击遮罩关闭
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("active");
+    });
+  </script>
+
+
+
+    <!-- 返回上一级按钮 -->
+    <div class="returnBtn" style="position: fixed; bottom: 40px;left: 40px;">
+        <a class="return"><i class="ri-arrow-left-circle-line"></i> 返回上一级</a>
+    </div>
+    <!-- 返回顶部按钮 -->
+    <div class="backTop">
+        <i class="ri-arrow-up-circle-line"></i>
+    </div>
+    <!-- 相关逻辑 -->
+    <script>
+        const backTop=document.querySelector('.backTop')
+        const backPage=document.querySelector('.returnBtn')
+        backTop.addEventListener('click',function(e){
+            window.scrollTo({
+                top:0,
+                behavior:'smooth'
+            })
+        })
+        backPage.addEventListener('click',function(e){
+            window.history.back();
+        })
+    </script>
+
+
+
+<div class="largeSeparator" style="margin: 0 auto 24px auto;"></div>
+
+
+<!-- 底部版权栏 -->
+<div class="bottom">
+    <div class="wrapper">
+        <div class="slogan">
+            <p>" 永远<span>年轻</span>，永远<span>热爱</span>，永远<span>热泪盈眶</span>&nbsp;&nbsp;"</p>
+            <p>With youth, with passion, with tears of devotion.</p>
+        </div>
+        <div class="logos">
+            <a href="https://github.com/RichardYi-SYSU/MyBlog"  class="fab fa-github"></a>
+            <a href=""></a>
+        </div>
+        <div class="copyright">
+           <p>Copyright © 2025, Richard-Yi All Rights Reserved</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

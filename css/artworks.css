@@ -1,6 +1,60 @@
 .bg_chaseSun
 {
-    background-image: url('/MyBlog/images/chaseSun.webp');
+    background-image: url(../images/chaseSun.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+}
+
+.workTypeSwitch
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.workTypeSwitch>div
+{
+    /* cursor: pointer; */
+    position: relative;
+    width: 80vw;
+    height: 240px;
+    background-color: skyblue;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size:cover;
+    background-position: center center;
+    transform: scale(1);
+    transition: all .3s ease;
+}
+.workTypeSwitch>div:hover
+{
+    transform: scale(1.02);
+}
+
+.workTypeSwitch>div h1
+{
+    font-size: 40px;
+    color:white;
+}
+
+.photos
+{
+    background-image: url(../images/huaishi.webp);
+}
+.videos 
+{
+    background-image: url(../images/shinku.webp);
+}
+.designs
+{
+    background-image: url(../images/artworks/鹭江final.png);
+}
+.projects
+{
+    background-image: url(../images/will/WILLwallpaper.jpg);
 }
