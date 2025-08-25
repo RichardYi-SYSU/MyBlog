@@ -149,14 +149,46 @@
     margin-bottom: 24px;
     width: 300px;
     height: 100px;
-    background-color: skyblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 24px;
-    
+    transition: all .3s ease;
 }
-
+.interests>div:hover
+{
+    transform: translateY(-5px);
+}
+.photograph
+{
+    background-image: url(../images/interests/photography.jpg);
+    color: white;
+}
+.travel
+{
+    background-image: url(../images/interests/travel.jpg);
+    color: rgb(255, 255, 255);
+}
+.acgn
+{
+    background-image: url(../images/interests/acgn.jpg);
+    color: rgb(255, 255, 255);
+}
+.railway
+{
+    background-image: url(../images/interests/railway.jpg);
+    color: rgb(255, 255, 255);
+}
+.aviation
+{
+    background-image: url(../images/interests/aviation.jpg);
+    color: rgb(255, 255, 255);
+}
+.digital
+{
+    background-image: url(../images/interests/digitals.jpg);
+    color: white;
+}
 .interests>div h2
 {
     font-size: 24px;
