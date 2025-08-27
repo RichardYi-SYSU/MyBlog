@@ -59,90 +59,59 @@
     </script>
     <div class="headerSeparator"></div>
     
-    <!-- 内容区域 -->
-    <div class="wrapper">
-        <div class="articleCard">
-            <img src="./posts/pictures/post_5.webp" alt="" class="leftPic">
-            <div class="text">
-                <div class="markdownStyle">
-                    <p class="aboveTitle">THE DESIGN OF MY LOGO</p>
-                    <h1>个人LOGO的设计思路</h1>
-                    <div class="largeSeparator"></div>
-                    <p>从配色，形状，含义等方面介绍了自己的logo的设计思路</p>
-                 </div>
-            </div>
-            <a  href="post.html?file=posts/post_5.md"  class="rightArrow">
-                <i class="ri-arrow-right-s-line"></i>
-            </a>
-            
-        </div>
-        <div class="articleCard">
-            <img src="./posts/pictures/post_1.webp" alt="" class="leftPic">
-            <div class="text">
-                <div class="markdownStyle">
-                    <p class="aboveTitle">AIR CRASH INVESTIGATION</p>
-                    <h1>《空中浩劫：气象危机》公选课期末作业</h1>
-                    <div class="largeSeparator"></div>
-                    <p>大一下学期公选课期末作业</p>
-                 </div>
-            </div>
-            <a  href="post.html?file=posts/post_1.md"  class="rightArrow">
-                <i class="ri-arrow-right-s-line"></i>
-            </a>
-            
-        </div>
 
-        <div class="articleCard">
-            <img src="./posts/pictures/post_2.webp" alt="" class="leftPic">
-            <div class="text">
-                <div class="markdownStyle">
-                    <p class="aboveTitle">BOOK REVIEW</p>
-                    <h1>共产党宣言读书报告</h1>
-                    <div class="largeSeparator"></div>
-                    <p>大一下学期思政课作业</p>
-                 </div>
-            </div>
-            <a  href="post.html?file=posts/post_2.md"  class="rightArrow">
-                <i class="ri-arrow-right-s-line"></i>
-            </a>
-            
-        </div>
 
-        <div class="articleCard">
-            <img src="./posts/pictures/post_3.webp" alt="" class="leftPic">
-            <div class="text">
-                <div class="markdownStyle">
-                    <p class="aboveTitle">ENGLISH MIND MAP</p>
-                    <h1>英语课文思维导图</h1>
-                    <div class="largeSeparator"></div>
-                    <p>也许是某一节英语课的思维导图</p>
-                 </div>
-            </div>
-            <a  href="post.html?file=posts/post_3.md"  class="rightArrow">
-                <i class="ri-arrow-right-s-line"></i>
-            </a>
-            
-        </div>
-        
-        <div class="articleCard">
-            <img src="./posts/pictures/post_4.webp" alt="" class="leftPic">
-            <div class="text">
-                <div class="markdownStyle">
-                    <p class="aboveTitle">EXPERIENCE OF MAKING A WEBSITE</p>
-                    <h1>记录自己写整个博客的过程</h1>
-                    <div class="largeSeparator"></div>
-                    <p>施工中</p>
-                 </div>
-            </div>
-            <a  href="post.html?file=posts/post_4.md"  class="rightArrow">
-                <i class="ri-arrow-right-s-line"></i>
-            </a>
-            
-        </div>
-        
-        
-        
-    </div>
+    <!-- 内容渲染区域 -->
+    <div class="wrapper"></div>
+
+
+
+
+    <script>
+        const wrapper=document.querySelector('.wrapper')
+        fetch("./posts/posts.json")
+        .then(res=>res.json())
+        .then(posts=>{
+            posts.forEach(post=>{
+                const articleCard=document.createElement("div")
+                const img=document.createElement("img")
+                const text=document.createElement("div")
+                const markdownStyle=document.createElement("div")
+                const aboveTitle=document.createElement("p")
+                const title=document.createElement("h1")
+                const info=document.createElement("p")
+                const link=document.createElement("a")
+                const largeSeparator=document.createElement("div")
+                const i=document.createElement("i")
+
+                articleCard.className="articleCard"
+                img.className="leftPic"
+                img.src=post.img;
+                text.className="text"
+                markdownStyle.className="markdownStyle"
+                aboveTitle.className="aboveTitle"
+                aboveTitle.innerHTML=post.enTitle
+                title.innerHTML=post.cnTitle
+                info.innerHTML=post.info
+                link.className="rightArrow"
+                link.href=post.link
+                largeSeparator.className="largeSeparator"
+                i.className="ri-arrow-right-s-line"
+
+                wrapper.appendChild(articleCard)
+                articleCard.appendChild(img);
+                articleCard.appendChild(text);
+                articleCard.appendChild(link);
+                text.appendChild(markdownStyle);
+                markdownStyle.appendChild(aboveTitle);
+                markdownStyle.appendChild(title);
+                markdownStyle.appendChild(largeSeparator);
+                markdownStyle.appendChild(info);
+                link.appendChild(i)
+
+            })
+        })
+    </script>
 
 
 
