@@ -1,5 +1,12 @@
 [
     {
+        "img":"posts/pictures/post_6.webp",
+        "enTitle":"REVIEW ON CUMCM",
+        "cnTitle":"记数模国赛",
+        "info":"介绍了自己大学参加的第一场学科类竞赛的前前后后",
+        "link":"post.html?file=posts/post_6.md"
+    },
+    {
         "img":"posts/pictures/post_5.webp",
         "enTitle":"THE DESIGN OF MY LOGO",
         "cnTitle":"个人LOGO的设计思路",
