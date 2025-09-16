@@ -1,5 +1,12 @@
 [
     {
+        "img":"posts/pictures/post_7.webp",
+        "enTitle":"AVOID ANXIETY",
+        "cnTitle":"避免焦虑",
+        "info":"如何避免焦虑？",
+        "link":"post.html?file=posts/post_7.md"
+    },
+    {
         "img":"posts/pictures/post_6.jpg",
         "enTitle":"REVIEW ON CUMCM",
         "cnTitle":"记数模国赛",
