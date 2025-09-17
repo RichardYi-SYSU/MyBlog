@@ -1,5 +1,12 @@
 [
     {
+        "img":"posts/pictures/post_8.webp",
+        "enTitle":"WEEKLY LOG IN CSE",
+        "cnTitle":"大二上学期的每周日志",
+        "info":"通过类似周记的形式记述自己的工作、收获、娱乐等等事项。希望自己的每一天都没有虚度",
+        "link":"post.html?file=posts/post_8.md"
+    },
+    {
         "img":"posts/pictures/post_7.webp",
         "enTitle":"AVOID ANXIETY",
         "cnTitle":"避免焦虑",
