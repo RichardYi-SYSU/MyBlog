@@ -1,5 +1,12 @@
 [
     {
+        "img":"posts/pictures/post_9.webp",
+        "enTitle":"NOTE ON PAPER",
+        "cnTitle":"论文阅读笔记",
+        "info":"读了Component Divide-and-Conquer for Real-World Image Super-Resolution",
+        "link":"post.html?file=posts/post_9.md"
+    },
+    {
         "img":"posts/pictures/post_8.webp",
         "enTitle":"WEEKLY LOG IN CSE",
         "cnTitle":"大二上学期的每周日志",
