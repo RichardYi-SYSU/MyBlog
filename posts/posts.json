@@ -1,5 +1,12 @@
 [
     {
+        "img":"posts/pictures/post_10.webp",
+        "enTitle":"ANALYSIS ON KMP ALGORITHM",
+        "cnTitle":"对KMP算法的理解",
+        "info":"部分匹配表是得出next数组的核心，也是KMP算法的核心",
+        "link":"post.html?file=posts/post_10.md"
+    },
+    {
         "img":"posts/pictures/post_9.webp",
         "enTitle":"NOTE ON PAPER",
         "cnTitle":"论文阅读笔记",
