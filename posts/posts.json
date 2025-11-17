@@ -1,5 +1,12 @@
 [
     {
+        "img":"posts/pictures/post_11.jpg",
+        "enTitle":"MEMORIES ON ZHYZ 55TH SPORTSMEETING",
+        "cnTitle":"记我冠",
+        "info":"那是我们的舞台，我们的世界",
+        "link":"post.html?file=posts/post_11.md"
+    },
+    {
         "img":"posts/pictures/post_10.webp",
         "enTitle":"ANALYSIS ON KMP ALGORITHM",
         "cnTitle":"对KMP算法的理解",
